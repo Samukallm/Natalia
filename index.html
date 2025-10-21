@@ -3,76 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Uma Surpresa...</title>
+    <title>Uma Surpresa Especial...</title>
     
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     
-    <style>
-        /* Fundo escuro para o tema misterioso */
+   <style>
         body {
-            background-color: #000;
+            /* Fundo preto sólido. Muito mais leve! */
+            background-color: #000; 
             color: #eee;
+            overflow-x: hidden; /* Evita barra de rolagem */
         }
 
-        /* Container principal para centralizar tudo verticalmente na tela.
-          'vh-100' = 100% da altura da tela (viewport height)
-        */
         .main-container {
-            min-height: 100vh;
+            min-height: 100vh; /* Garante que ocupe a tela toda */
             display: flex;
             flex-direction: column;
             justify-content: center; /* Centraliza verticalmente */
             align-items: center; /* Centraliza horizontalmente */
             text-align: center;
+            /* Adiciona um padding para não colar nas bordas do celular */
+            padding: 2rem 1rem; 
         }
 
-        /* --- Animação de Arco-Íris para o H1 --- */
+        /* --- Animação de Arco-Íris (MANTIDA) --- */
         .rainbow-text {
-            font-size: 3.5rem; /* Tamanho maior */
+            font-size: 3.5rem;
             font-weight: bold;
-            
-            /* 1. Cria o gradiente de cores */
             background: linear-gradient(90deg, 
                 #ff0000, #ff7300, #fffb00, #48ff00, 
                 #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
-            
-            /* 2. Define o tamanho do fundo (o dobro) para a animação */
             background-size: 200% auto;
-            
-            /* 3. Faz o fundo (gradiente) aparecer APENAS no texto */
             -webkit-background-clip: text;
             background-clip: text;
-            
-            /* 4. Deixa o texto transparente para o fundo aparecer */
             color: transparent;
-            
-            /* 5. Define a animação 'rainbow-scroll' */
             animation: rainbow-scroll 5s linear infinite;
         }
 
-        /* Keyframes da animação (move o background-position) */
         @keyframes rainbow-scroll {
             0% { background-position: 0% 50%; }
             100% { background-position: 200% 50%; }
         }
         
-        /* --- Esconder o Texto Especial --- */
+        /* --- Transição de Fade-in (MANTIDA) --- */
         #TextoEspecial {
-            display: none; /* Começa escondido */
-            background-color: rgba(255, 255, 255, 0.05); /* Fundo leve */
+            display: none; 
+            opacity: 0; /* Começa invisível */
+            background-color: rgba(255, 255, 255, 0.05);
             border-radius: 8px;
             padding: 25px;
             margin-top: 20px;
-            text-align: left; /* Alinha o texto da carta à esquerda */
+            text-align: left;
+            transition: opacity 1.5s ease-in-out; /* A animação suave */
+            max-width: 600px; /* Limita a largura em telas maiores */
         }
 
+        /* --- Footer (Ajustado) --- */
+        /* Removemos o 'position: absolute' para um fluxo mais natural */
         footer {
-            margin-top: 40px; /* Espaçamento do footer */
+            margin-top: 40px;
             color: #888;
+            width: 100%;
+            text-align: center;
         }
     </style>
 </head>
 <body>
+
+
 
     <div class="main-container container p-3">
         
@@ -81,15 +79,16 @@
         </header>
 
         <main>
-            <div id="DivBtn" class="my-4"> <button id="BtnInicial" class="btn btn-outline-light btn-lg">
+            <div id="DivBtn" class="my-4">
+                <button id="BtnInicial" class="btn btn-outline-light btn-lg">
                     Clique aqui, amor
                 </button>
             </div>
 
             <div id="TextoEspecial">
-                <p>
-                    Amor, no dia 14 de agosto foi o dia que eu tomei a melhor desisão da minha vida que foi te conhecer. Naquele dia eu nem imaginava que a minha vida ia mudar pra um rumo que eu nunca imaginei mas sempre sonhei. Você mudou a minha vida para a melhor. Eu nunca achei que um garoto como eu iria encontar alguém tão pefeita quanto Você, você é a pessoa que me faz sorrir todos os dias assim que eles começam, eu posso estar triste o quanto for mas quando eu falo com você, quando eu vejo você, tudo isso vai embora, você me traz a alegria que eu tanto buscava. por mias que eu esteja fazendo esse texto, nenhum conjunto de palavras é capaz de descrever o quanto eu amo você e o quanto você é especial na minha vida. até hoje eu fico incrédulo do quanto a gente combina, do quanto você me completa, do quanto eu me sinto especial do seu lado. Eu amo cada detalhe seu, seu sorriso, seus olhos, seu cabelo, a sua risada, o jeito que fica envergonhada quando eu falo essas coisas, por isso eu acho inadmissível que você diga que você não está linda, porque nos meus olhos, você é perfeita, e isso é a palavra do dicionário mais próxima de descrever você, mesmo eu achando ela tão pouca, eu nunca fui amado do jeito que você me ama e eu nuca amei alguém do jeito que eu amo você. Eu necessito de você na minha vida, eu necessito te fazer feliz, eu posso não ser rico, posso não ser perfeito, posso não ser o super-homem mas eu te garanto com toda a minha alma que eu vou fazer de tudo pra te ver sorrir TODOS os dias, mesmo que eu tivesse que enfrentar o mundo todo sozinho eu faria isso com orgulho por você com um sorriso no rosto, porque você merece todo o amor do mundo e eu vou te dar todo esse amor. Isso é uma promessa que eu faço pra você hoje e pra sempre. Eu te amo mais que tudo nessa vida Natália, você é o meu tudo, E esse site é só uma tentativa de mostrar o quanto eu te amo, mas eu sei que nenhuma palavra, nenhum gesto, nenhum presente é capaz de expressar o quanto você é especial pra mim. Eu te amo infinitamente💕
-                </p>
+               <p>
+    Amor, no dia 14 de agosto foi o dia que eu tomei a melhor decisão da minha vida, que foi te conhecer. Naquele dia, eu nem imaginava que a minha vida ia mudar para um rumo que eu nunca imaginei, mas sempre sonhei. Você mudou a minha vida para melhor. Eu nunca achei que um garoto como eu iria encontrar alguém tão perfeita quanto Você. Você é a pessoa que me faz sorrir todos os dias, assim que eles começam. Eu posso estar triste o quanto for, mas quando eu falo com você, quando eu vejo você, tudo isso vai embora, você me traz a alegria que eu tanto buscava. Por mais que eu esteja fazendo esse texto, nenhum conjunto de palavras é capaz de descrever o quanto eu amo você e o quanto você é especial na minha vida. Até hoje eu fico incrédulo do quanto a gente combina, do quanto você me completa, do quanto eu me sinto especial do seu lado. Eu amo cada detalhe seu: seu sorriso, seus olhos, seu cabelo, a sua risada, o jeito que fica envergonhada quando eu falo essas coisas. Por isso, eu acho inadmissível que você diga que você não está linda, porque nos meus olhos, você é perfeita. E essa é a palavra do dicionário mais próxima de descrever você, mesmo eu achando que ela ainda é pouco. Eu nunca fui amado do jeito que você me ama e eu nunca amei alguém do jeito que eu amo você. Eu necessito de você na minha vida, eu necessito te fazer feliz. Eu posso não ser rico, posso não ser perfeito, posso não ser o Super-Homem, mas eu te garanto com toda a minha alma que eu vou fazer de tudo pra te ver sorrir TODOS os dias. Mesmo que eu tivesse que enfrentar o mundo todo sozinho, eu faria isso com orgulho por você, com um sorriso no rosto, porque você merece todo o amor do mundo, e eu vou te dar todo esse amor. Isso é uma promessa que eu faço pra você hoje e pra sempre. Eu te amo mais que tudo nessa vida, Natália, você é o meu tudo.
+</p>
             </div>
         </main>
 
@@ -97,24 +96,28 @@
             <p>Feito com amor para meu amor💕💕</p>
         </footer>
 
-    </div> <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    </div> 
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     
     <script>
-        // Espera o documento HTML carregar
         document.addEventListener('DOMContentLoaded', function() {
-            
-            // Pega os elementos pelo ID
             const botao = document.getElementById('BtnInicial');
             const texto = document.getElementById('TextoEspecial');
             
-            // Adiciona o "ouvidor" de clique no botão
             botao.addEventListener('click', function() {
-                
-                // 1. Mostra o texto especial
+                // Remove o botão com um fade-out
+                botao.style.opacity = '0';
+                botao.style.transition = 'opacity 0.8s ease-out';
+                setTimeout(() => {
+                    botao.style.display = 'none';
+                }, 800); // Esconde depois que a transição terminar
+
+                // Mostra o texto com um fade-in
                 texto.style.display = 'block';
-                
-                // 2. Opcional: Esconde o botão depois de clicado
-                botao.style.display = 'none'; 
+                setTimeout(() => {
+                    texto.style.opacity = '1';
+                }, 100); // Pequeno atraso para garantir que o display:block seja aplicado antes do opacity:1
             });
         });
     </script>
